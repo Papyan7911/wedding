@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Նարեկ & Մերի | 26.10.2026</title>
+
+  <meta
+    name="description"
+    content="Նարեկ և Մերիի հարսանեկան հրավիրատոմսը — 26 Հոկտեմբերի 2026"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Armenian:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --cream: #f8f4ed;
+      --cream-dark: #eee7da;
+      --white: #fffdf9;
+      --gold: #b99a68;
+      --gold-dark: #92774d;
+      --text: #29251f;
+      --muted: #777067;
+      --line: rgba(185, 154, 104, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: "Montserrat", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    /* =========================
+       LOADER
+    ========================= */
+
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: var(--cream);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-content {
+      text-align: center;
+    }
+
+    .loader-names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+
+    .loader-line {
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      margin: 15px auto;
+      animation: loaderLine 1.8s ease forwards;
+    }
+
+    @keyframes loaderLine {
+      to {
+        width: 140px;
+      }
+    }
+
+    /* =========================
+       NAV
+    ========================= */
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 22px 5%;
+      display: flex;
+      justify-content: center;
+      transition: 0.4s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(248, 244, 237, 0.92);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          rgba(248, 244, 237, 0.32),
+          rgba(248, 244, 237, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90")
+        center / cover;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 25px;
+      border: 1px solid rgba(255,255,255,0.8);
+      pointer-events: none;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.05),
+        rgba(0,0,0,0.2)
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      animation: heroIn 1.5s ease;
+    }
+
+    .hero-small {
+      font-size: 12px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .hero-names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(5rem, 13vw, 12rem);
+      line-height: 0.8;
+      font-weight: 400;
+      font-style: italic;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.25);
+    }
+
+    .ampersand {
+      font-size: 0.6em;
+      color: #f0dfbd;
+      margin: 0 15px;
+    }
+
+    .hero-date {
+      margin-top: 35px;
+      font-size: 13px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .hero-scroll::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 55px;
+      background: white;
+      margin: 10px auto 0;
+      opacity: 0.7;
+    }
+
+    @keyframes heroIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 120px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 65px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .ornament {
+      color: var(--gold);
+      margin: 15px 0;
+      font-size: 20px;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      text-align: center;
+      background: var(--white);
+    }
+
+    .intro-text {
+      max-width: 700px;
+      margin: auto;
+      font-family: "Noto Serif Armenian", serif;
+      font-size: 20px;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .quote {
+      margin-top: 35px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    .countdown-section {
+      background: var(--cream-dark);
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 850px;
+      margin: auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .time-box {
+      text-align: center;
+      padding: 35px 15px;
+      border-right: 1px solid var(--line);
+    }
+
+    .time-box:last-child {
+      border-right: 0;
+    }
+
+    .time-number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--gold-dark);
+      line-height: 1;
+    }
+
+    .time-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+/* =========================
+   CHURCH / KECHARIS
+========================= */
+
+.church {
+  background: var(--cream);
+}
+
+.church-card {
+  max-width: 1100px;
+  min-height: 560px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  background: var(--white);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.08);
+}
+
+.church-image {
+  min-height: 560px;
+
+  background:
+    linear-gradient(
+      rgba(40, 30, 20, 0.08),
+      rgba(40, 30, 20, 0.08)
+    ),
+    url("https://d23etkghwwc7sj.cloudfront.net/uploads/sightseeing/images/66f936b39b05b-kechar1.jpg")
+    center / cover;
+}
+
+.church-info {
+  padding: 60px 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.church-symbol {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+
+  color: var(--gold-dark);
+
+  font-size: 20px;
+
+  margin-bottom: 25px;
+}
+
+.church-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 52px;
+  font-weight: 500;
+  font-style: italic;
+
+  margin-bottom: 20px;
+}
+
+.church-info > p {
+  max-width: 400px;
+
+  font-family: "Noto Serif Armenian", serif;
+
+  color: var(--muted);
+
+  line-height: 2;
+
+  margin-bottom: 30px;
+}
+
+.church-details {
+  display: flex;
+  gap: 50px;
+
+  margin-bottom: 35px;
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  padding: 20px 35px;
+}
+
+.church-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.church-details span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.church-details strong {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  color: var(--gold-dark);
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .church-card {
+    grid-template-columns: 1fr;
+  }
+
+  .church-image {
+    min-height: 400px;
+  }
+
+  .church-info {
+    padding: 55px 25px;
+  }
+
+  .church-info h3 {
+    font-size: 42px;
+  }
+
+  .church-details {
+    gap: 35px;
+  }
+
+}
+    /* =========================
+       STORY
+    ========================= */
+
+    .story {
+      background: var(--white);
+    }
+
+    .story-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .story-image {
+      height: 620px;
+      background:
+        url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90")
+        center / cover;
+    }
+
+    .story-content h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 50px;
+      font-weight: 500;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+
+    .story-content p {
+      font-family: "Noto Serif Armenian", serif;
+      line-height: 2;
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       TIMELINE
+    ========================= */
+
+    .timeline-section {
+      background: var(--cream);
+    }
+
+    .timeline {
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      width: 50%;
+      padding: 20px 50px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      margin-left: 50%;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 30px;
+      width: 11px;
+      height: 11px;
+      border: 1px solid var(--gold);
+      background: var(--cream);
+      border-radius: 50%;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+      right: -5px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -5px;
+    }
+
+    .timeline-time {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--gold-dark);
+      font-size: 28px;
+    }
+
+    .timeline-title {
+      font-family: "Noto Serif Armenian", serif;
+      font-size: 17px;
+      margin-top: 5px;
+    }
+
+    .timeline-description {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 7px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       VENUE
+    ========================= */
+
+    .venue {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .venue-card {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 500px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+    }
+
+    .venue-image {
+      background:
+        url("https://instagram.fevn9-2.fna.fbcdn.net/v/t51.75761-15/491511588_17858137881407152_455820422766302161_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=MzYxNzc5MzY2NjI2OTA1NzU5NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=uwvIlBOgU40Q7kNvwHi2ln2&_nc_oc=AdrKILI5M5ZEflvZmbx-csWsN34EVpWTVwWoBbQswqsufXw8c1ZTrNqjWENoNo22gXg&_nc_zt=23&_nc_ht=instagram.fevn9-2.fna&_nc_gid=8xnRvhuIADoZwYE3MCYC8g&_nc_ss=7aa8c&oh=00_AQLDLVF4KHEOilOojtZepxSGy9r_DsBc1WzqUY0DA7NADg&oe=6AB87E09")
+        center / cover;
+    }
+
+    .venue-info {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .venue-info h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 48px;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .venue-info p {
+      color: var(--muted);
+      margin: 15px 0 30px;
+      line-height: 1.8;
+    }
+
+    .map-button,
+    .submit-button {
+      display: inline-block;
+      padding: 15px 32px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--gold-dark);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .map-button:hover,
+    .submit-button:hover {
+      background: var(--gold);
+      color: white;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 250px;
+      gap: 12px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    /* =========================
+       RSVP
+    ========================= */
+
+    .rsvp {
+      background: var(--white);
+    }
+
+    .rsvp-box {
+      max-width: 650px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .rsvp-box > p {
+      font-family: "Noto Serif Armenian", serif;
+      color: var(--muted);
+      margin-bottom: 35px;
+    }
+
+    .form {
+      display: grid;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      border: 1px solid #ddd4c7;
+      background: var(--cream);
+      padding: 16px;
+      outline: none;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .submit-button {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #f1eee6;
+      color: var(--gold-dark);
+      font-family: "Noto Serif Armenian", serif;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 100px 20px 45px;
+      background: #29251f;
+      color: white;
+      text-align: center;
+    }
+
+    .footer-names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(4rem, 9vw, 8rem);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .footer-date {
+      letter-spacing: 5px;
+      font-size: 11px;
+      margin-top: 20px;
+      color: #d7c5a4;
+    }
+
+    .footer-line {
+      width: 80px;
+      height: 1px;
+      background: var(--gold);
+      margin: 35px auto;
+    }
+
+    .footer-text {
+      font-family: "Noto Serif Armenian", serif;
+      font-size: 13px;
+      color: #bcb6ad;
+    }
+
+    /* =========================
+       LIGHTBOX
+    ========================= */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      background: rgba(20,18,15,0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+      font-weight: 200;
+    }
+
+    /* =========================
+       REVEAL
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        justify-content: flex-end;
+      }
+
+      .menu-btn {
+        display: block;
+        color: var(--text);
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background: var(--cream);
+        flex-direction: column;
+        justify-content: center;
+        gap: 35px;
+        transition: 0.4s ease;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .hero::before {
+        inset: 15px;
+      }
+
+      .hero-names {
+        font-size: clamp(4rem, 18vw, 7rem);
+      }
+
+      section {
+        padding: 85px 6%;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .time-box:nth-child(2) {
+        border-right: 0;
+      }
+
+      .time-box:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .story-image {
+        height: 450px;
+      }
+
+      .timeline::before {
+        left: 10px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 20px 35px 45px;
+        text-align: left;
+      }
+
+      .timeline-dot,
+      .timeline-item:nth-child(odd) .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot {
+        left: 5px;
+        right: auto;
+      }
+
+      .venue-card {
+        grid-template-columns: 1fr;
+      }
+
+      .venue-image {
+        min-height: 350px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-row: span 2;
+      }
+
+      .gallery-item:nth-child(4) {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero-small {
+        font-size: 9px;
+        letter-spacing: 4px;
+      }
+
+      .hero-date {
+        letter-spacing: 3px;
+      }
+
+      .intro-text {
+        font-size: 17px;
+      }
+
+      .gallery-grid {
+        gap: 7px;
+        grid-auto-rows: 160px;
+      }
+
+      .venue-info {
+        padding: 40px 25px;
+      }
+    }
+    /* =========================
+   INVITATION
+========================= */
+
+.invitation {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(185,154,104,0.10),
+      transparent 35%
+    ),
+    var(--white);
+  padding: 130px 7%;
+  position: relative;
+}
+
+.invitation-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 85px 70px;
+  text-align: center;
+  background: var(--cream);
+  border: 1px solid rgba(185,154,104,0.35);
+  position: relative;
+  box-shadow: 0 25px 80px rgba(0,0,0,0.06);
+}
+
+.invitation-card::before,
+.invitation-card::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-color: var(--gold);
+  opacity: 0.6;
+}
+
+.invitation-card::before {
+  top: 20px;
+  left: 20px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.invitation-card::after {
+  bottom: 20px;
+  right: 20px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+.invitation-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.invitation-top span {
+  width: 70px;
+  height: 1px;
+  background: var(--line);
+}
+
+.invitation-ornament {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.invitation-card .section-label {
+  margin-bottom: 25px;
+}
+
+.invitation-card h2 {
+  font-family: "Noto Serif Armenian", serif;
+  font-size: clamp(25px, 4vw, 42px);
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.invitation-card h2 em {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35em;
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+.invitation-names {
+  margin-top: 35px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(45px, 7vw, 75px);
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.invitation-names span {
+  font-size: 0.65em;
+  margin: 0 12px;
+  color: var(--gold);
+}
+
+.invitation-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  color: var(--gold);
+}
+
+.invitation-divider span {
+  width: 90px;
+  height: 1px;
+  background: var(--line);
+}
+
+.invitation-card p {
+  max-width: 620px;
+  margin: auto;
+  font-family: "Noto Serif Armenian", serif;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--muted);
+}
+
+.invitation-date {
+  margin: 45px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.invitation-date > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.invitation-date small {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+}
+
+.invitation-date strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 65px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--gold-dark);
+}
+
+.invitation-year {
+  padding-left: 35px;
+  border-left: 1px solid var(--line);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  color: var(--gold-dark);
+}
+
+.invitation-footer {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+
+/* =========================
+   INVITATION MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .invitation {
+    padding: 80px 5%;
+  }
+
+  .invitation-card {
+    padding: 65px 25px;
+  }
+
+  .invitation-card::before,
+  .invitation-card::after {
+    width: 45px;
+    height: 45px;
+  }
+
+  .invitation-card::before {
+    top: 12px;
+    left: 12px;
+  }
+
+  .invitation-card::after {
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .invitation-card h2 {
+    font-size: 22px;
+    line-height: 1.8;
+  }
+
+  .invitation-names {
+    font-size: 47px;
+  }
+
+  .invitation-date {
+    gap: 20px;
+  }
+
+  .invitation-date > div:first-child {
+    gap: 8px;
+  }
+
+  .invitation-date strong {
+    font-size: 55px;
+  }
+
+  .invitation-year {
+    padding-left: 20px;
+    font-size: 22px;
+  }
+
+  .invitation-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .invitation-footer span:nth-child(2) {
+    display: none;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       LOADER
+  ========================= -->
+
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-names">Նարեկ & Մերի</div>
+      <div class="loader-line"></div>
+      <small>26 • 10 • 2026</small>
+    </div>
+  </div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav class="nav" id="nav">
+
+    <button class="menu-btn" id="menuBtn">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Սկիզբ</a></li>
+      <li><a href="#story">Մեր մասին</a></li>
+      <li><a href="#program">Ծրագիր</a></li>
+      <li><a href="#venue">Վայրը</a></li>
+      <li><a href="#gallery">Լուսանկարներ</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <div class="hero-small">
+        Մենք ամուսնանում ենք
+      </div>
+
+      <h1 class="hero-names">
+        Նարեկ
+        <span class="ampersand">&</span>
+        Մերի
+      </h1>
+
+      <div class="hero-date">
+        26 Հոկտեմբեր 2026
+      </div>
+
+    </div>
+
+    <a href="#intro" class="hero-scroll">
+      Բացահայտել
+    </a>
+
+  </header>
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+<!-- 
+  <section class="intro reveal" id="intro">
+
+    <div class="section-title">
+
+      <div class="section-label">
+        Մեր հատուկ օրը
+      </div>
+
+      <h2>
+        Սիրո պատմությունը շարունակվում է...
+      </h2>
+
+      <div class="ornament">
+        ✦
+      </div>
+
+    </div>
+
+    <p class="intro-text">
+      Երկու սիրտ, երկու ճանապարհ և մեկ ընդհանուր պատմություն։
+      Մենք ուրախ կլինենք մեր կյանքի ամենակարևոր օրը կիսել
+      մեր սիրելի մարդկանց հետ։
+    </p>
+
+    <div class="quote">
+      «Եվ նրանք ապրեցին սիրով...»
+    </div>
+
+  </section> -->
+<!-- =========================
+     INVITATION
+========================= -->
+<section class="invitation reveal" id="invitation">
+
+  <div class="invitation-card">
+
+    <div class="invitation-top">
+      <span></span>
+      <div class="invitation-ornament">✦</div>
+      <span></span>
+    </div>
+
+    <div class="section-label">
+      Հարսանեկան հրավիրատոմս
+    </div>
+
+    <h2>
+      Սիրով հրավիրում ենք<br>
+      Ձեզ կիսելու մեր<br>
+      <em>ամենակարևոր օրը</em>
+    </h2>
+
+    <div class="invitation-names">
+      Նարեկ <span>&</span> Մերի
+    </div>
+
+    <div class="invitation-divider">
+      <span></span>
+      ♡
+      <span></span>
+    </div>
+
+    <p>
+      Մեր սիրո պատմությունը հասել է մի նոր ու գեղեցիկ էջի։
+      Մենք ցանկանում ենք այդ օրը կիսել մեր ընտանիքի,
+      ընկերների և մեզ հարազատ մարդկանց հետ։
+    </p>
+
+    <div class="invitation-date">
+      <div>
+        <small>ԵՐԿՈՒՇԱԲԹԻ</small>
+        <strong>26</strong>
+        <small>ՀՈԿՏԵՄԲԵՐ</small>
+      </div>
+
+      <div class="invitation-year">
+        2026
+      </div>
+    </div>
+
+    <div class="invitation-footer">
+      <span>Կեչառիս</span>
+      <span>•</span>
+      <span>Palais Wedding Hall</span>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- =========================
+       COUNTDOWN
+  ========================= -->
+
+  <section class="countdown-section reveal">
+
+    <div class="section-title">
+
+      <div class="section-label">
+        Մինչև մեր օրը
+      </div>
+
+      <h2>
+        Սպասում ենք...
+      </h2>
+
+    </div>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <div class="time-number" id="days">00</div>
+        <div class="time-label">Օր</div>
+      </div>
+
+      <div class="time-box">
+        <div class="time-number" id="hours">00</div>
+        <div class="time-label">Ժամ</div>
+      </div>
+
+      <div class="time-box">
+        <div class="time-number" id="minutes">00</div>
+        <div class="time-label">Րոպե</div>
+      </div>
+
+      <div class="time-box">
+        <div class="time-number" id="seconds">00</div>
+        <div class="time-label">Վայրկյան</div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       STORY
+  ========================= -->
+
+  <section class="story reveal" id="story">
+
+    <div class="story-grid">
+
+      <div class="story-image"></div>
+
+      <div class="story-content">
+
+        <div class="section-label">
+          Մեր պատմությունը
+        </div>
+
+        <h3>
+          Երկու հոգի.<br>
+          Մեկ պատմություն.
+        </h3>
+
+        <p>
+          Երբեմն ամենագեղեցիկ պատմությունները սկսվում են
+          ամենապարզ պահերից։
+        </p>
+
+        <p>
+          Մի հանդիպում, մի ժպիտ, մի հայացք...
+          և կյանքը սկսում է փոխվել։
+        </p>
+
+        <p>
+          Այսօր մենք պատրաստվում ենք սկսել մեր պատմության
+          ամենագեղեցիկ նոր գլուխը։
+        </p>
+
+        <div class="ornament">
+          ♡
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+<!-- =========================
+     CHURCH / KECHARIS
+========================= -->
+
+<section class="church reveal" id="church">
+
+  <div class="section-title">
+
+    <div class="section-label">
+      Սուրբ պսակադրություն
+    </div>
+
+    <h2>
+      Կեչառիս
+    </h2>
+
+    <div class="ornament">
+      ✦
+    </div>
+
+  </div>
+
+  <div class="church-card">
+
+    <div class="church-image"></div>
+
+    <div class="church-info">
+
+      <div class="church-symbol">✝</div>
+
+      <h3>
+        Կեչառիսի վանք
+      </h3>
+
+      <p>
+        Մեր կյանքի ամենակարևոր պահերից մեկը
+        կկիսենք այստեղ՝ սիրով և օրհնությամբ։
+      </p>
+
+      <div class="church-details">
+
+        <div>
+          <span>Ժամը</span>
+          <strong>17:00</strong>
+        </div>
+
+        <div>
+          <span>Վայրը</span>
+          <strong>Կեչառիս</strong>
+        </div>
+
+      </div>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Kecharis+Monastery+Tsaghkadzor"
+        target="_blank"
+        rel="noopener"
+        class="map-button"
+      >
+        Բացել քարտեզը
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- =========================
+       PROGRAM
+  ========================= -->
+
+  <section class="timeline-section reveal" id="program">
+
+    <div class="section-title">
+
+      <div class="section-label">
+        26 • 10 • 2026
+      </div>
+
+      <h2>
+        Օրվա ծրագիրը
+      </h2>
+
+      <div class="ornament">
+        ✦
+      </div>
+
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-time">
+          17:00
+        </div>
+
+        <div class="timeline-title">
+          Հյուրերի ժամանում
+        </div>
+
+        <div class="timeline-description">
+          Սիրով սպասում ենք մեր հյուրերին։
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-time">
+          18:00
+        </div>
+
+        <div class="timeline-title">
+          Հարսանեկան արարողություն
+        </div>
+
+        <div class="timeline-description">
+          Մեր կյանքի ամենակարևոր «Այո»-ն։
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-time">
+          19:30
+        </div>
+
+        <div class="timeline-title">
+          Հարսանեկան խնջույք
+        </div>
+
+        <div class="timeline-description">
+          Երաժշտություն, պար, ժպիտներ և տոն։
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-time">
+          23:30
+        </div>
+
+        <div class="timeline-title">
+          Տորթ
+        </div>
+
+        <div class="timeline-description">
+          Քաղցր ավարտ մեր գեղեցիկ օրվա համար։
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       VENUE
+  ========================= -->
+
+  <section class="venue reveal" id="venue">
+
+    <div class="section-title">
+
+      <div class="section-label">
+        Հանդիպման վայր
+      </div>
+
+      <h2>
+        Palais Wedding Hall
+      </h2>
+
+    </div>
+
+    <div class="venue-card">
+
+      <div class="venue-image"></div>
+
+      <div class="venue-info">
+
+        <div class="ornament">
+          ♡
+        </div>
+
+        <h3>
+          Palais
+        </h3>
+
+        <p>
+          Մեզ սպասում է մեր ամենագեղեցիկ երեկոն։
+          <br>
+          Սիրով սպասում ենք Ձեզ։
+        </p>
+
+        <a
+          class="map-button"
+          href="https://www.google.com/maps/place/Palais+Wedding+Hall/data=!4m2!3m1!1s0x0:0x58cade7aece40560"
+          target="_blank"
+          rel="noopener"
+        >
+          Բացել քարտեզը
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       GALLERY
+  ========================= -->
+
+  <!-- <section class="gallery reveal" id="gallery">
+
+    <div class="section-title">
+
+      <div class="section-label">
+        Մեր պահերը
+      </div>
+
+      <h2>
+        Memories
+      </h2>
+
+      <div class="ornament">
+        ✦
+      </div>
+
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=90"
+          alt="Wedding"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=90"
+          alt="Wedding couple"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=90"
+          alt="Wedding flowers"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=90"
+          alt="Wedding hall"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=90"
+          alt="Bride"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=90"
+          alt="Wedding decoration"
+        >
+      </div>
+
+    </div>
+
+  </section> -->
+
+
+  <!-- =========================
+       RSVP
+  ========================= -->
+
+  <!-- <section class="rsvp reveal" id="rsvp">
+
+    <div class="section-title">
+
+      <div class="section-label">
+        Ձեր ներկայությունը մեզ համար կարևոր է
+      </div>
+
+      <h2>
+        Կսպասե՞նք Ձեզ
+      </h2>
+
+      <div class="ornament">
+        ♡
+      </div>
+
+    </div>
+
+    <div class="rsvp-box">
+
+      <p>
+        Խնդրում ենք հաստատել Ձեր ներկայությունը մինչև
+        հոկտեմբերի 15-ը։
+      </p>
+
+      <form class="form" id="rsvpForm">
+
+        <input
+          type="text"
+          id="guestName"
+          placeholder="Ձեր անունը"
+          required
+        >
+
+        <select id="attendance" required>
+
+          <option value="">
+            Կկարողանա՞ք ներկա լինել
+          </option>
+
+          <option value="yes">
+            Այո, սիրով կմիանամ
+          </option>
+
+          <option value="no">
+            Ցավոք, չեմ կարող
+          </option>
+
+        </select>
+
+        <select id="guests">
+
+          <option value="1">
+            1 հյուր
+          </option>
+
+          <option value="2">
+            2 հյուր
+          </option>
+
+          <option value="3">
+            3 հյուր
+          </option>
+
+          <option value="4">
+            4 հյուր
+          </option>
+
+        </select>
+
+        <textarea
+          id="message"
+          placeholder="Հաղորդագրություն (ըստ ցանկության)"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          Հաստատել ներկայությունը
+        </button>
+
+      </form>
+
+      <div class="success-message" id="successMessage">
+        Շնորհակալություն ❤️
+        <br>
+        Ձեր պատասխանը գրանցվեց։
+      </div>
+
+    </div>
+
+  </section> -->
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-names">
+      Նարեկ & Մերի
+    </div>
+
+    <div class="footer-date">
+      26 • 10 • 2026
+    </div>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-text">
+      Սիրով սպասում ենք Ձեզ մեր կյանքի ամենագեղեցիկ օրը։
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       LIGHTBOX
+  ========================= -->
+
+  <div class="lightbox" id="lightbox">
+
+    <div class="lightbox-close" id="lightboxClose">
+      ×
+    </div>
+
+    <img id="lightboxImage" src="" alt="Gallery">
+
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* =========================
+       LOADER
+    ========================= */
+
+    window.addEventListener("load", () => {
+
+      setTimeout(() => {
+
+        document
+          .getElementById("loader")
+          .classList.add("hidden");
+
+      }, 1000);
+
+    });
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    const nav = document.getElementById("nav");
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+
+    });
+
+    menuBtn.addEventListener("click", () => {
+
+      navLinks.classList.toggle("active");
+
+      menuBtn.textContent =
+        navLinks.classList.contains("active")
+          ? "×"
+          : "☰";
+
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.textContent = "☰";
+
+      });
+
+    });
+
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    const weddingDate =
+      new Date("October 26, 2026 17:00:00").getTime();
+
+    function updateCountdown() {
+
+      const now = new Date().getTime();
+
+      const distance = weddingDate - now;
+
+      if (distance <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+      }
+
+      const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      const hours =
+        Math.floor(
+          (distance % (1000 * 60 * 60 * 24))
+          / (1000 * 60 * 60)
+        );
+
+      const minutes =
+        Math.floor(
+          (distance % (1000 * 60 * 60))
+          / (1000 * 60)
+        );
+
+      const seconds =
+        Math.floor(
+          (distance % (1000 * 60))
+          / 1000
+        );
+
+      document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+
+    /* =========================
+       GALLERY LIGHTBOX
+    ========================= */
+
+    const galleryItems =
+      document.querySelectorAll(".gallery-item");
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightboxImage");
+
+    const lightboxClose =
+      document.getElementById("lightboxClose");
+
+    galleryItems.forEach(item => {
+
+      item.addEventListener("click", () => {
+
+        const img = item.querySelector("img");
+
+        lightboxImage.src = img.src;
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+      });
+
+    });
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("active");
+
+      document.body.style.overflow = "";
+
+    }
+
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+    lightbox.addEventListener("click", event => {
+
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+
+    });
+
+    document.addEventListener("keydown", event => {
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+    });
+
+
+    /* =========================
+       RSVP
+    ========================= */
+
+    const rsvpForm =
+      document.getElementById("rsvpForm");
+
+    const successMessage =
+      document.getElementById("successMessage");
+
+    rsvpForm.addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("guestName").value.trim();
+
+      const attendance =
+        document.getElementById("attendance").value;
+
+      if (!name || !attendance) {
+        return;
+      }
+
+      rsvpForm.style.display = "none";
+
+      successMessage.style.display = "block";
+
+      /*
+        Այստեղ հետագայում կարող ենք միացնել backend,
+        Telegram bot, Google Sheets կամ email service։
+      */
+
+      console.log({
+        name,
+        attendance,
+        guests:
+          document.getElementById("guests").value,
+        message:
+          document.getElementById("message").value
+      });
+
+    });
+
+
+    /* =========================
+       PARALLAX HERO
+    ========================= */
+
+    const hero = document.querySelector(".hero");
+    const heroContent =
+      document.querySelector(".hero-content");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.innerWidth > 800) {
+
+        const scrollY = window.scrollY;
+
+        if (scrollY < window.innerHeight) {
+
+          heroContent.style.transform =
+            `translateY(${scrollY * 0.18}px)`;
+
+        }
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
