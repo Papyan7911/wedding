@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="hy">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="./img/IMG_3621.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="./img/66f936b39b05b-kechar1.jpg" />
+
 
   <title>Նարեկ & Մերի | 26.10.2026</title>
 
-  <meta
-    name="description"
-    content="Նարեկ և Մերիի հարսանեկան հրավիրատոմսը — 26 Հոկտեմբերի 2026"
-  />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Armenian:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
+  <meta name="description" content="Նարեկ և Մերիի հարսանեկան հրավիրատոմսը — 26 Հոկտեմբերի 2026" />
   <style>
+    .timeline-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.timeline-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: currentColor;
+}
     :root {
       --cream: #f8f4ed;
       --cream-dark: #eee7da;
@@ -44,7 +49,7 @@
     body {
       background: var(--cream);
       color: var(--text);
-      font-family: "Montserrat", sans-serif;
+      font-family: Arial, sans-serif;
       overflow-x: hidden;
     }
 
@@ -85,7 +90,7 @@
     }
 
     .loader-names {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(3rem, 8vw, 6rem);
       font-style: italic;
       color: var(--gold-dark);
@@ -108,6 +113,12 @@
     /* =========================
        NAV
     ========================= */
+    .venue-address {
+      margin: 18px 0 22px;
+      font-size: 15px;
+      color: #8b7355;
+      letter-spacing: 0.3px;
+    }
 
     .nav {
       position: fixed;
@@ -124,7 +135,7 @@
     .nav.scrolled {
       background: rgba(248, 244, 237, 0.92);
       backdrop-filter: blur(15px);
-      box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
     }
 
     .nav-links {
@@ -177,30 +188,25 @@
       justify-content: center;
       overflow: hidden;
       background:
-        linear-gradient(
-          rgba(248, 244, 237, 0.32),
-          rgba(248, 244, 237, 0.55)
-        ),
-        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90")
-        center / cover;
+        linear-gradient(rgba(248, 244, 237, 0.32),
+          rgba(248, 244, 237, 0.55)),
+        url("./img/IMG_3621.jpg") center / cover;
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 25px;
-      border: 1px solid rgba(255,255,255,0.8);
+      border: 1px solid rgba(255, 255, 255, 0.8);
       pointer-events: none;
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.05),
-        rgba(0,0,0,0.2)
-      );
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.2));
     }
 
     .hero-content {
@@ -219,12 +225,12 @@
     }
 
     .hero-names {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(5rem, 13vw, 12rem);
       line-height: 0.8;
       font-weight: 400;
       font-style: italic;
-      text-shadow: 0 4px 30px rgba(0,0,0,0.25);
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     }
 
     .ampersand {
@@ -267,6 +273,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -279,6 +286,8 @@
 
     section {
       padding: 120px 7%;
+      content-visibility: auto;
+      contain-intrinsic-size: 700px;
     }
 
     .section-title {
@@ -295,7 +304,7 @@
     }
 
     .section-title h2 {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(3rem, 6vw, 5rem);
       font-weight: 500;
       font-style: italic;
@@ -319,7 +328,7 @@
     .intro-text {
       max-width: 700px;
       margin: auto;
-      font-family: "Noto Serif Armenian", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 20px;
       line-height: 2;
       color: var(--muted);
@@ -327,7 +336,7 @@
 
     .quote {
       margin-top: 35px;
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 25px;
       font-style: italic;
       color: var(--gold-dark);
@@ -340,7 +349,7 @@
     .countdown-section {
       background: var(--cream-dark);
     }
-
+.venue-socials { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 18px; } .social-icon { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(139, 115, 85, 0.35); border-radius: 50%; color: #8b7355; text-decoration: none; transition: all 0.3s ease; } .social-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; } .social-icon:nth-child(2) svg { fill: currentColor; stroke: none; } .social-icon:hover { background: #8b7355; color: #fff; transform: translateY(-2px); }
     .countdown {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -361,7 +370,7 @@
     }
 
     .time-number {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(3rem, 6vw, 5rem);
       color: var(--gold-dark);
       line-height: 1;
@@ -374,151 +383,150 @@
       color: var(--muted);
       margin-top: 10px;
     }
-/* =========================
+
+    /* =========================
    CHURCH / KECHARIS
 ========================= */
 
-.church {
-  background: var(--cream);
-}
+    .church {
+      background: var(--cream);
+    }
 
-.church-card {
-  max-width: 1100px;
-  min-height: 560px;
-  margin: auto;
+    .church-card {
+      max-width: 1100px;
+      min-height: 560px;
+      margin: auto;
 
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
 
-  background: var(--white);
+      background: var(--white);
 
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.08);
-}
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.08);
+    }
 
-.church-image {
-  min-height: 560px;
+    .church-image {
+      min-height: 560px;
 
-  background:
-    linear-gradient(
-      rgba(40, 30, 20, 0.08),
-      rgba(40, 30, 20, 0.08)
-    ),
-    url("https://d23etkghwwc7sj.cloudfront.net/uploads/sightseeing/images/66f936b39b05b-kechar1.jpg")
-    center / cover;
-}
+      background:
+        linear-gradient(rgba(40, 30, 20, 0.08),
+          rgba(40, 30, 20, 0.08)),
+        url("./img/66f936b39b05b-kechar1.jpg") center / cover;
+    }
 
-.church-info {
-  padding: 60px 50px;
+    .church-info {
+      padding: 60px 50px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-  text-align: center;
-}
+      text-align: center;
+    }
 
-.church-symbol {
-  width: 48px;
-  height: 48px;
+    .church-symbol {
+      width: 48px;
+      height: 48px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  border: 1px solid var(--gold);
-  border-radius: 50%;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
 
-  color: var(--gold-dark);
+      color: var(--gold-dark);
 
-  font-size: 20px;
+      font-size: 20px;
 
-  margin-bottom: 25px;
-}
+      margin-bottom: 25px;
+    }
 
-.church-info h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 52px;
-  font-weight: 500;
-  font-style: italic;
+    .church-info h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 52px;
+      font-weight: 500;
+      font-style: italic;
 
-  margin-bottom: 20px;
-}
+      margin-bottom: 20px;
+    }
 
-.church-info > p {
-  max-width: 400px;
+    .church-info>p {
+      max-width: 400px;
 
-  font-family: "Noto Serif Armenian", serif;
+      font-family: Georgia, "Times New Roman", serif;
 
-  color: var(--muted);
+      color: var(--muted);
 
-  line-height: 2;
+      line-height: 2;
 
-  margin-bottom: 30px;
-}
+      margin-bottom: 30px;
+    }
 
-.church-details {
-  display: flex;
-  gap: 50px;
+    .church-details {
+      display: flex;
+      gap: 50px;
 
-  margin-bottom: 35px;
+      margin-bottom: 35px;
 
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
 
-  padding: 20px 35px;
-}
+      padding: 20px 35px;
+    }
 
-.church-details div {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
+    .church-details div {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
 
-.church-details span {
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    .church-details span {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
 
-  color: var(--muted);
-}
+      color: var(--muted);
+    }
 
-.church-details strong {
-  font-family: "Cormorant Garamond", serif;
+    .church-details strong {
+      font-family: Georgia, "Times New Roman", serif;
 
-  font-size: 25px;
-  font-weight: 500;
+      font-size: 25px;
+      font-weight: 500;
 
-  color: var(--gold-dark);
-}
+      color: var(--gold-dark);
+    }
 
 
-/* Mobile */
+    /* Mobile */
 
-@media (max-width: 800px) {
+    @media (max-width: 800px) {
 
-  .church-card {
-    grid-template-columns: 1fr;
-  }
+      .church-card {
+        grid-template-columns: 1fr;
+      }
 
-  .church-image {
-    min-height: 400px;
-  }
+      .church-image {
+        min-height: 400px;
+      }
 
-  .church-info {
-    padding: 55px 25px;
-  }
+      .church-info {
+        padding: 55px 25px;
+      }
 
-  .church-info h3 {
-    font-size: 42px;
-  }
+      .church-info h3 {
+        font-size: 42px;
+      }
 
-  .church-details {
-    gap: 35px;
-  }
+      .church-details {
+        gap: 35px;
+      }
 
-}
+    }
+
     /* =========================
        STORY
     ========================= */
@@ -539,12 +547,11 @@
     .story-image {
       height: 620px;
       background:
-        url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90")
-        center / cover;
+        url("./img/IMG_3938.jpg") center / cover;
     }
 
     .story-content h3 {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 50px;
       font-weight: 500;
       font-style: italic;
@@ -552,7 +559,7 @@
     }
 
     .story-content p {
-      font-family: "Noto Serif Armenian", serif;
+      font-family: Georgia, "Times New Roman", serif;
       line-height: 2;
       color: var(--muted);
       font-size: 16px;
@@ -616,13 +623,13 @@
     }
 
     .timeline-time {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       color: var(--gold-dark);
       font-size: 28px;
     }
 
     .timeline-title {
-      font-family: "Noto Serif Armenian", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 17px;
       margin-top: 5px;
     }
@@ -649,13 +656,12 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: 500px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
     }
 
     .venue-image {
       background:
-        url("https://instagram.fevn9-2.fna.fbcdn.net/v/t51.75761-15/491511588_17858137881407152_455820422766302161_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=MzYxNzc5MzY2NjI2OTA1NzU5NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=uwvIlBOgU40Q7kNvwHi2ln2&_nc_oc=AdrKILI5M5ZEflvZmbx-csWsN34EVpWTVwWoBbQswqsufXw8c1ZTrNqjWENoNo22gXg&_nc_zt=23&_nc_ht=instagram.fevn9-2.fna&_nc_gid=8xnRvhuIADoZwYE3MCYC8g&_nc_ss=7aa8c&oh=00_AQLDLVF4KHEOilOojtZepxSGy9r_DsBc1WzqUY0DA7NADg&oe=6AB87E09")
-        center / cover;
+        url("./img/palais.jpg"), url("./img/unnamed.webp") center;
     }
 
     .venue-info {
@@ -668,7 +674,7 @@
     }
 
     .venue-info h3 {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 48px;
       font-style: italic;
       font-weight: 500;
@@ -756,8 +762,8 @@
       text-align: center;
     }
 
-    .rsvp-box > p {
-      font-family: "Noto Serif Armenian", serif;
+    .rsvp-box>p {
+      font-family: Georgia, "Times New Roman", serif;
       color: var(--muted);
       margin-bottom: 35px;
     }
@@ -802,7 +808,7 @@
       padding: 20px;
       background: #f1eee6;
       color: var(--gold-dark);
-      font-family: "Noto Serif Armenian", serif;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     /* =========================
@@ -817,7 +823,7 @@
     }
 
     .footer-names {
-      font-family: "Cormorant Garamond", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(4rem, 9vw, 8rem);
       font-style: italic;
       font-weight: 400;
@@ -838,7 +844,7 @@
     }
 
     .footer-text {
-      font-family: "Noto Serif Armenian", serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 13px;
       color: #bcb6ad;
     }
@@ -851,7 +857,7 @@
       position: fixed;
       inset: 0;
       z-index: 5000;
-      background: rgba(20,18,15,0.95);
+      background: rgba(20, 18, 15, 0.95);
       display: none;
       align-items: center;
       justify-content: center;
@@ -885,12 +891,25 @@
     .reveal {
       opacity: 0;
       transform: translateY(35px);
-      transition: opacity 0.9s ease, transform 0.9s ease;
+      transition: opacity 0.45s ease, transform 0.45s ease;
     }
 
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
     }
 
     /* =========================
@@ -1221,88 +1240,20 @@
     </div>
 
   </section>
-<!-- =========================
+  <!-- =========================
      CHURCH / KECHARIS
 ========================= -->
 
-<section class="church reveal" id="church">
-
-  <div class="section-title">
-
-    <div class="section-label">
-      Սուրբ պսակադրություն
-    </div>
-
-    <h2>
-      Կեչառիս
-    </h2>
-
-    <div class="ornament">
-      ✦
-    </div>
-
-  </div>
-
-  <div class="church-card">
-
-    <div class="church-image"></div>
-
-    <div class="church-info">
-
-      <div class="church-symbol">✝</div>
-
-      <h3>
-        Կեչառիսի վանք
-      </h3>
-
-      <p>
-        Մեր կյանքի ամենակարևոր պահերից մեկը
-        կկիսենք այստեղ՝ սիրով և օրհնությամբ։
-      </p>
-
-      <div class="church-details">
-
-        <div>
-          <span>Ժամը</span>
-          <strong>17:00</strong>
-        </div>
-
-        <div>
-          <span>Վայրը</span>
-          <strong>Կեչառիս</strong>
-        </div>
-
-      </div>
-
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=Kecharis+Monastery+Tsaghkadzor"
-        target="_blank"
-        rel="noopener"
-        class="map-button"
-      >
-        Բացել քարտեզը
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- =========================
-       PROGRAM
-  ========================= -->
-
-  <section class="timeline-section reveal" id="program">
+  <section class="church reveal" id="church">
 
     <div class="section-title">
 
       <div class="section-label">
-        26 • 10 • 2026
+        Սուրբ պսակադրություն
       </div>
 
       <h2>
-        Օրվա ծրագիրը
+        Կեչառիս
       </h2>
 
       <div class="ornament">
@@ -1311,86 +1262,256 @@
 
     </div>
 
-    <div class="timeline">
+    <div class="church-card">
 
-      <div class="timeline-item">
+      <div class="church-image"></div>
 
-        <div class="timeline-dot"></div>
+      <div class="church-info">
 
-        <div class="timeline-time">
-          17:00
+        <div class="church-symbol">✝</div>
+
+        <h3>
+          Կեչառիսի վանք
+        </h3>
+
+        <p>
+          Մեր կյանքի ամենակարևոր պահերից մեկը
+          կկիսենք այստեղ՝ սիրով և օրհնությամբ։
+        </p>
+
+        <div class="church-details">
+
+          <div>
+            <span>Ժամը</span>
+            <strong>17:00</strong>
+          </div>
+
+          <div>
+            <span>Վայրը</span>
+            <strong>Կեչառիս</strong>
+          </div>
+
         </div>
 
-        <div class="timeline-title">
-          Հյուրերի ժամանում
-        </div>
-
-        <div class="timeline-description">
-          Սիրով սպասում ենք մեր հյուրերին։
-        </div>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-time">
-          18:00
-        </div>
-
-        <div class="timeline-title">
-          Հարսանեկան արարողություն
-        </div>
-
-        <div class="timeline-description">
-          Մեր կյանքի ամենակարևոր «Այո»-ն։
-        </div>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-time">
-          19:30
-        </div>
-
-        <div class="timeline-title">
-          Հարսանեկան խնջույք
-        </div>
-
-        <div class="timeline-description">
-          Երաժշտություն, պար, ժպիտներ և տոն։
-        </div>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-time">
-          23:30
-        </div>
-
-        <div class="timeline-title">
-          Տորթ
-        </div>
-
-        <div class="timeline-description">
-          Քաղցր ավարտ մեր գեղեցիկ օրվա համար։
-        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Kecharis+Monastery+Tsaghkadzor" target="_blank"
+          rel="noopener" class="map-button">
+          Բացել քարտեզը
+        </a>
 
       </div>
 
     </div>
 
   </section>
+
+  <!-- =========================
+       PROGRAM
+  ========================= -->
+<section class="timeline-section reveal" id="program">
+
+  <div class="section-title">
+
+    <div class="section-label">
+      26 • 10 • 2026
+    </div>
+
+    <h2>
+      Օրվա ծրագիրը
+    </h2>
+
+    <div class="ornament">
+      ✦
+    </div>
+
+  </div>
+
+  <div class="timeline">
+
+    <!-- <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-time">
+        10:00
+      </div>
+
+      <div class="timeline-title">
+        Փեսայի տուն
+      </div>
+
+      <div class="timeline-description">
+        Հարսանեկան օրվա գեղեցիկ սկիզբը՝ փեսայի տանը։
+      </div>
+
+    </div> -->
+
+
+    <!-- <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-time">
+        12:00
+      </div>
+
+      <div class="timeline-title">
+        Հարսի տուն
+      </div>
+
+      <div class="timeline-description">
+        Սիրո, ժպիտների և գեղեցիկ ավանդույթների պահը։
+      </div>
+
+    </div> -->
+
+
+    <!-- Եկեղեցի -->
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-time">
+        15:30
+      </div>
+
+      <div class="timeline-title timeline-title-icon">
+
+        <svg
+          class="timeline-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 3V7"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M10 5H14"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M4 21V10L12 6L20 10V21"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M7 21V14H17V21"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M10 21V17H14V21"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        Եկեղեցի
+
+      </div>
+
+      <div class="timeline-description">
+        Մեր կյանքի ամենակարևոր «Այո»-ն՝ սիրո և օրհնության ներքո։
+      </div>
+
+    </div>
+
+
+    <!-- Հարսանեկան սրահ -->
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-time">
+        17:00
+      </div>
+
+      <div class="timeline-title timeline-title-icon">
+
+        <svg
+          class="timeline-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 11H20"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M5 11V19"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M19 11V19"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M3 19H21"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M7 11V8C7 6.9 7.9 6 9 6H15C16.1 6 17 6.9 17 8V11"
+            stroke="currentColor"
+            stroke-width="1.6"
+          />
+
+          <path
+            d="M9 6V4"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M15 6V4"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+        </svg>
+
+        Հարսանեկան սրահ
+
+      </div>
+
+      <div class="timeline-description">
+        Երաժշտություն, պար, ժպիտներ և միասին անցկացրած գեղեցիկ երեկո։
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
   <!-- =========================
@@ -1406,46 +1527,33 @@
       </div>
 
       <h2>
-        Palais Wedding Hall
+        Palais Հարսանյաց Սրահ
       </h2>
 
     </div>
 
     <div class="venue-card">
-
       <div class="venue-image"></div>
-
       <div class="venue-info">
-
-        <div class="ornament">
-          ♡
-        </div>
-
-        <h3>
-          Palais
-        </h3>
-
-        <p>
-          Մեզ սպասում է մեր ամենագեղեցիկ երեկոն։
-          <br>
-          Սիրով սպասում ենք Ձեզ։
-        </p>
-
-        <a
-          class="map-button"
+        <div class="ornament"> ♡ </div>
+        <h3> Palais </h3>
+        <p> Մեզ սպասում է մեր ամենագեղեցիկ երեկոն։ <br> Սիրով սպասում ենք Ձեզ։ </p>
+        <div class="venue-address"> 📍 ք. Հրազդան, Կամոյի 3 </div> <a class="map-button"
           href="https://www.google.com/maps/place/Palais+Wedding+Hall/data=!4m2!3m1!1s0x0:0x58cade7aece40560"
-          target="_blank"
-          rel="noopener"
-        >
-          Բացել քարտեզը
-        </a>
-
+          target="_blank" rel="noopener"> Բացել քարտեզը </a>
+        <div class="venue-socials"> <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+            aria-label="Instagram" class="social-icon"> <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg> </a> <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
+            class="social-icon"> <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"></path>
+            </svg> </a> </div>
       </div>
-
     </div>
 
   </section>
-
 
   <!-- =========================
        GALLERY
@@ -1923,33 +2031,8 @@
 
     });
 
-
-    /* =========================
-       PARALLAX HERO
-    ========================= */
-
-    const hero = document.querySelector(".hero");
-    const heroContent =
-      document.querySelector(".hero-content");
-
-    window.addEventListener("scroll", () => {
-
-      if (window.innerWidth > 800) {
-
-        const scrollY = window.scrollY;
-
-        if (scrollY < window.innerHeight) {
-
-          heroContent.style.transform =
-            `translateY(${scrollY * 0.18}px)`;
-
-        }
-
-      }
-
-    });
-
   </script>
 
 </body>
+
 </html>
